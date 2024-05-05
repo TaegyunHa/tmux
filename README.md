@@ -5,7 +5,7 @@
 ```
 brew install tmux
 brew install tmuxinator
-git clone https://github.com/tmux-plugins/tpm.git ~/.config/tmux/plugins/tpm
+git clone --recursive https://github.com/TaegyunHa/tmux.git ~/.config/tmux
 ```
 
 ## Directory Tree
@@ -44,51 +44,35 @@ tmux source-file ~/.config/tmux/tmux.conf
 
 ### Terminal Operations
 
-1. New Session
-    ```
-    tmux new -s <sessionName>
-    ```
-2. Attach Session
-   ```
-   tmux attach -t <sessionName>
-   ```
-3. Detach Session
-   ```
-   tmux detach
-   ```
-4. Close window
-   ```
-   exit
-   ```
+Command                       | Description
+------------------------------|------------
+`tmux new -s <sessionName>`   | New Session
+`tmux attach -t <sessionName>`| Attach Session
+`tmux detach`                 | Detach Session
+`exit`                        | Close window
+
 
 ### Prefix operations
 
-1. tmux Command
-   ```
-   <prefix> : <command>
-   ```
-2. List Sessions
-   ```
-   <prefix> s
-   ```
-3. Split Window Horizontally
-   ```
-   <prefix> %
-   <prefix> |
-   ```
-4. Split Window Vertically
-   ```
-   <prefix> "
-   <prefix> -
-   ```
-5. Resize Window
-   ```
-   <prefix> [h,j,k,l]
-   ```
+Key bind              | Description
+----------------------|------------
+`<prefix> : <command>`| Inline command
+`<prefix> s`          | List all Sessions
+`<prefix> w`          | List all Windows
+`<prefix> c`          | Create Window
+`<prefix> [1,2,3..]`  | Select Window
+`<prefix> n`          | Next Window
+`<prefix> p`          | Previous Window
+`<prefix> \|`         | Split Window Horizontally
+`<prefix> -`          | Split Window Vertically
+`<prefix> ,`          | Rename Window
+`<prefix> [h,j,k,l]`  | Resize Pane
+`<prefix> [`          | Copy mode (`ctrl-c` to finish)
+
 
 ### vim-tmux-navigator
 
-1. Move window
-    ```
-    <Cntr> [h,j,k,l]
-    ```
+Key bind              | Description
+----------------------|------------
+`<Cntr> [h,j,k,l]`    | Move Pane Focus
+
